@@ -1,0 +1,30 @@
+<!--
+  Copyright (c) 2015, 2021, Oracle and/or its affiliates.
+  Licensed under The Universal Permissive License (UPL), Version 1.0
+  as shown at https://oss.oracle.com/licenses/upl/
+
+-->
+<p><oj-bind-text value="[[messageText]]"></oj-bind-text></p>
+
+<oj-form-layout id="form-container" label-edge="top">
+  <oj-input-text
+    id="firstNameInput"
+    label-hint="First Name"
+    value="[[$props.firstName]]"
+  ></oj-input-text>
+  <oj-input-text
+    id="lastNameInput"
+    label-hint="Last Name"
+    value="[[$props.lastName]]"
+  ></oj-input-text>
+  <oj-input-text
+    id="inputHireDate"
+    label-hint="Date Hired"
+    value="[[$props.hireDate]]"
+  ></oj-input-text>
+  <oj-input-text
+    id="inputSalary"
+    label-hint="Salary Display"
+    value="[[$props.hireSalary]]"
+  ></oj-input-text>
+</oj-form-layout>

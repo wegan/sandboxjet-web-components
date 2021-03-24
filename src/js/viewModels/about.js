@@ -8,15 +8,23 @@
 /*
  * Your about ViewModel code goes here
  */
-// define(["accUtils"], function (accUtils) {
+// define([
+//   "knockout",
+//   "accUtils",
+//   "text!../endpoints.json",
+//   "ojs/ojdatagrid",
+//   "ojs/ojcollectiondatagriddatasource",
+//   "ojs/ojinputtext",
+//   "ojs/ojformlayout",
+// ], function (ko, accUtils, endpoints) {
+//   function AboutViewModel() {
 define([
   "knockout",
   "accUtils",
   "text!../endpoints.json",
   "ojs/ojdatagrid",
   "ojs/ojcollectiondatagriddatasource",
-  "ojs/ojinputtext",
-  "ojs/ojformlayout",
+  "my-employee-form/loader",
 ], function (ko, accUtils, endpoints) {
   function AboutViewModel() {
     /**
