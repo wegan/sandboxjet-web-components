@@ -1,5 +1,7 @@
 # Workshop: Web Component Development with Oracle JET
 
+weganNote: This branch (21032503-crud) contains the final part of Part 3 where the CRUD functionality described in the workshop is implemented
+
 The purpose of this script is to show how to put together a CRUD scenario in an [Oracle JET](https://www.oracle.com/webfolder/technetwork/jet/index.html) application, supported by Web Components.
 
 **Troubleshooting:** If you run into problems, go here for the completed source files: [bit.ly/learn-jet-result](http://bit.ly/learn-jet-result)
