@@ -10,21 +10,24 @@
   <oj-input-text
     id="firstNameInput"
     label-hint="First Name"
-    value="[[$props.firstName]]"
+    value="{{$props.firstName}}"
   ></oj-input-text>
   <oj-input-text
     id="lastNameInput"
     label-hint="Last Name"
-    value="[[$props.lastName]]"
+    value="{{$props.lastName}}"
   ></oj-input-text>
   <oj-input-text
     id="inputHireDate"
     label-hint="Date Hired"
-    value="[[$props.hireDate]]"
+    value="{{$props.hireDate}}"
   ></oj-input-text>
   <oj-input-text
     id="inputSalary"
     label-hint="Salary Display"
-    value="[[$props.hireSalary]]"
+    value="{{$props.hireSalary}}"
   ></oj-input-text>
 </oj-form-layout>
+<div>
+  <oj-slot name="toolbar" />
+</div>

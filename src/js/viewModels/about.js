@@ -63,6 +63,49 @@ define([
       }
     };
     // Part 2, Step C End
+
+    // Part 3, Step C (Add CRUD). Begin
+    // Update function
+    self.update = function () {
+      self.empl = self.collection.get(self.inputEmployeeID());
+      self.empl.save(self.buildModel(), {
+        contentType: "application/json",
+        success: function (model, response) {
+          console.log(self.inputEmployeeID() + " -- updated successfully");
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.log(self.inputEmployeeID() + " -- " + jqXHR);
+        },
+      });
+    };
+
+    // Delete function
+    self.remove = function () {
+      self.modelToUpdate = self.collection.remove(self.buildModel());
+      self.modelToUpdate.destroy();
+    };
+
+    // Create function
+    self.create = function (event) {
+      if (self.inputEmployeeID(nextKey) < nextKey) {
+        self.inputEmployeeID(nextKey);
+      }
+      nextKey += 1;
+      self.inputEmployeeID(nextKey);
+      self.collection.create(self.buildModel(), {
+        wait: true,
+        contentType: "application/json",
+        success: function (model, response) {
+          console.log(
+            self.inputEmployeeID() + " -- new record created successfully"
+          );
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.log(self.inputEmployeeID() + " -- " + jqXHR);
+        },
+      });
+    };
+
     // weganEnd
 
     // Below are a set of the ViewModel methods invoked by the oj-module component.

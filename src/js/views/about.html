@@ -16,9 +16,16 @@
   </oj-data-grid>
 
   <my-employee-form
-    first-name="[[inputFirstName]]"
-    last-name="[[inputLastName]]"
-    hire-date="[[inputHireDate]]"
-    hire-salary="[[inputSalary]]"
-  ></my-employee-form>
+    first-name="{{inputFirstName}}"
+    last-name="{{inputLastName}}"
+    hire-date="{{inputHireDate}}"
+    hire-salary="{{inputSalary}}"
+  >
+    <span slot="toolbar">
+      <oj-button on-oj-action="[[create]]">Create</oj-button>
+
+      <oj-button on-oj-action="[[update]]">Update</oj-button>
+      <oj-button on-oj-action="[[remove]]">Delete</oj-button>
+    </span>
+  </my-employee-form>
 </div>
