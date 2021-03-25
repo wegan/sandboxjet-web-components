@@ -15,26 +15,10 @@
   >
   </oj-data-grid>
 
-  <oj-form-layout id="form-container" label-edge="top">
-    <oj-input-text
-      id="firstNameInput"
-      label-hint="First Name"
-      value="[[inputFirstName]]"
-    ></oj-input-text>
-    <oj-input-text
-      id="lastNameInput"
-      label-hint="Last Name"
-      value="[[inputLastName]]"
-    ></oj-input-text>
-    <oj-input-text
-      id="inputHireDate"
-      label-hint="Date Hired"
-      value="[[inputHireDate]]"
-    ></oj-input-text>
-    <oj-input-text
-      id="inputSalary"
-      label-hint="Salary"
-      value="[[inputSalary]]"
-    ></oj-input-text>
-  </oj-form-layout>
+  <my-employee-form
+    first-name="[[inputFirstName]]"
+    last-name="[[inputLastName]]"
+    hire-date="[[inputHireDate]]"
+    hire-salary="[[inputSalary]]"
+  ></my-employee-form>
 </div>

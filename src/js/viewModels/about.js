@@ -1,14 +1,10 @@
-/*
- * Your about ViewModel code goes here
- */
 define([
   "knockout",
   "accUtils",
   "text!../endpoints.json",
   "ojs/ojdatagrid",
   "ojs/ojcollectiondatagriddatasource",
-  "ojs/ojinputtext",
-  "ojs/ojformlayout",
+  "my-employee-form/loader",
 ], function (ko, accUtils, endpoints) {
   function AboutViewModel() {
     // weganBegin
@@ -49,7 +45,7 @@ define([
       };
     };
 
-    //used to update the fields based on the selected row:
+    //update the fields based on the selected row:
     self.updateFields = function (model) {
       self.inputEmployeeID(model.get("id"));
       self.inputFirstName(model.get("FIRST_NAME"));
