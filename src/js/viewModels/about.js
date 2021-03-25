@@ -1,23 +1,3 @@
-/**
- * @license
- * Copyright (c) 2014, 2021, Oracle and/or its affiliates.
- * Licensed under The Universal Permissive License (UPL), Version 1.0
- * as shown at https://oss.oracle.com/licenses/upl/
- * @ignore
- */
-/*
- * Your about ViewModel code goes here
- */
-// define([
-//   "knockout",
-//   "accUtils",
-//   "text!../endpoints.json",
-//   "ojs/ojdatagrid",
-//   "ojs/ojcollectiondatagriddatasource",
-//   "ojs/ojinputtext",
-//   "ojs/ojformlayout",
-// ], function (ko, accUtils, endpoints) {
-//   function AboutViewModel() {
 define([
   "knockout",
   "accUtils",
@@ -27,13 +7,8 @@ define([
   "my-employee-form/loader",
 ], function (ko, accUtils, endpoints) {
   function AboutViewModel() {
-    /**
-     * weganBegin
-     *
-     */
-
+    // weganBegin
     //Step3begin from G's training https://github.com/geertjanw/ojet-training
-
     // self.url = "http://localhost:3000/employees";
     self.url = JSON.parse(endpoints).employees;
 
@@ -49,11 +24,9 @@ define([
       rowHeader: "id",
       columns: ["FIRST_NAME", "LAST_NAME", "HIRE_DATE", "SALARY"],
     });
-
     //step3end
 
     // Part 2, Step C
-
     var nextKey = 121;
     self.inputEmployeeID = ko.observable(nextKey);
     self.inputFirstName = ko.observable();
@@ -72,7 +45,7 @@ define([
       };
     };
 
-    //used to update the fields based on the selected row:
+    //update the fields based on the selected row:
     self.updateFields = function (model) {
       self.inputEmployeeID(model.get("id"));
       self.inputFirstName(model.get("FIRST_NAME"));
@@ -91,10 +64,7 @@ define([
     };
 
     // Part 2, Step C End
-
-    /**
-     * weganEnd
-     */
+    // weganEnd
 
     // Below are a set of the ViewModel methods invoked by the oj-module component.
     // Please reference the oj-module jsDoc for additional information.
