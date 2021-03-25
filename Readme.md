@@ -1,5 +1,7 @@
 # Workshop: Web Component Development with Oracle JET
 
+weganNote: This branch (21032502-addwebcomp) contains the result of doing Part 3 where an employee form web component was created and replaced the oj-form used in Part 2. Later 'release' branches (21032502-\*) will contain the CRUD functionality described in the workshop.
+
 The purpose of this script is to show how to put together a CRUD scenario in an [Oracle JET](https://www.oracle.com/webfolder/technetwork/jet/index.html) application, supported by Web Components.
 
 **Troubleshooting:** If you run into problems, go here for the completed source files: [bit.ly/learn-jet-result](http://bit.ly/learn-jet-result)
